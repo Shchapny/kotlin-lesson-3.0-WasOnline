@@ -36,8 +36,8 @@ fun hoursToText(seconds: Int): String {
 fun agoToText(seconds: Int): String {
     return when (seconds) {
         in 0..60 -> "$USER_NAME1 \nбыл(а) в сети только что"
-        in 61..3600 -> "$USER_NAME2 \nбыл(а) в сети " + minutesToText(seconds)
-        in 3601..86400 -> "$USER_NAME3 \nбыл(а) в сети " + hoursToText(seconds)
+        in 61..3600 -> "$USER_NAME2 \nбыл(а) в сети ${minutesToText(seconds)}"
+        in 3601..86400 -> "$USER_NAME3 \nбыл(а) в сети ${hoursToText(seconds)}"
         in 86401..172800 -> "$USER_NAME4 \nбыл(а) в сети сегодня"
         in 172801..259200 -> "$USER_NAME5 \nбыл(а) в сети вчера"
         else -> "$USER_NAME6 \nбыл(а) в сети давно"
